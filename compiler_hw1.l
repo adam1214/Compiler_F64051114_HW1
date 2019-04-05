@@ -1,4 +1,4 @@
-/* Definition section 111111111111*/
+/* Definition section */
 %{
 	#include <stdio.h>
 	#include <stdlib.h>
