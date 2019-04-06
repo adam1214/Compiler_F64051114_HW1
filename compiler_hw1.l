@@ -19,59 +19,61 @@ number {digit}+
 /* Rules section */
 %%
 
-"+" 	{ printf("\r%s \t ADD\n", yytext); }
-"-"		{ printf("\r%s \t SUB\n", yytext); }
-"*"		{ printf("\r%s \t MUL\n", yytext); }
-"/"		{ printf("\r%s \t DIV\n", yytext); }
-"%"		{ printf("\r%s \t MOD\n", yytext); }
-"++"		{ printf("\r%s \t INC\n", yytext); }
-"--"		{ printf("\r%s \t DEC\n", yytext); }
-">"		{ printf("\r%s \t MT\n", yytext); }
-"<"		{ printf("\r%s \t LT\n", yytext); }
-">="		{ printf("\r%s \t MTE\n", yytext); }
-"=="		{ printf("\r%s \t EQ\n", yytext); }
-"!="		{ printf("\r%s \t NE\n", yytext); }
-"="		{ printf("\r%s \t ASGN\n", yytext); }
-"+="		{ printf("\r%s \t ADDASGN\n", yytext); }
-"-="		{ printf("\r%s \t SUBASGN\n", yytext); }
-"*="		{ printf("\r%s \t MULASGN\n", yytext); }
-"/="		{ printf("\r%s \t DIVASGN\n", yytext); }
-"%="		{ printf("\r%s \t MODASGN\n", yytext); }
-"&&"		{ printf("\r%s \t AND\n", yytext); }
-"||"		{ printf("\r%s \t OR\n", yytext); }
-"!"		{ printf("\r%s \t NOT\n", yytext); }
-"("		{ printf("\r%s \t LB\n", yytext); }
-")"		{ printf("\r%s \t RB\n", yytext); }
-"{"		{ printf("\r%s \t LCB\n", yytext);}
-"}"		{ printf("\r%s \t RCB\n", yytext); }
-"["		{ printf("\r%s \t LSB\n", yytext); }
-"]"		{ printf("\r%s \t RSB\n", yytext); }
-","		{ printf("\r%s \t COMMA\n", yytext); }
-";"		{ printf("\r%s \t SEMICOLON\n", yytext); }
+"+" 	{ printf("%s \t ADD\n", yytext); }
+"-"		{ printf("%s \t SUB\n", yytext); }
+"*"		{ printf("%s \t MUL\n", yytext); }
+"/"		{ printf("%s \t DIV\n", yytext); }
+"%"		{ printf("%s \t MOD\n", yytext); }
+"++"		{ printf("%s \t INC\n", yytext); }
+"--"		{ printf("%s \t DEC\n", yytext); }
+">"		{ printf("%s \t MT\n", yytext); }
+"<"		{ printf("%s \t LT\n", yytext); }
+">="		{ printf("%s \t MTE\n", yytext); }
+"<="		{ printf("%s \t LTE\n", yytext); }
+"=="		{ printf("%s \t EQ\n", yytext); }
+"!="		{ printf("%s \t NE\n", yytext); }
+"="		{ printf("%s \t ASGN\n", yytext); }
+"+="		{ printf("%s \t ADDASGN\n", yytext); }
+"-="		{ printf("%s \t SUBASGN\n", yytext); }
+"*="		{ printf("%s \t MULASGN\n", yytext); }
+"/="		{ printf("%s \t DIVASGN\n", yytext); }
+"%="		{ printf("%s \t MODASGN\n", yytext); }
+"&&"		{ printf("%s \t AND\n", yytext); }
+"||"		{ printf("%s \t OR\n", yytext); }
+"!"		{ printf("%s \t NOT\n", yytext); }
+"("		{ printf("%s \t LB\n", yytext); }
+")"		{ printf("%s \t RB\n", yytext); }
+"{"		{ printf("%s \t LCB\n", yytext);}
+"}"		{ printf("%s \t RCB\n", yytext); }
+"["		{ printf("%s \t LSB\n", yytext); }
+"]"		{ printf("%s \t RSB\n", yytext); }
+","		{ printf("%s \t COMMA\n", yytext); }
+";"		{ printf("%s \t SEMICOLON\n", yytext); }
 "\""		{ str_const(); }
-"print"		{ printf("\r%s \t PRINT\n", yytext); }
-"if"		{ printf("\r%s \t IF\n", yytext); }
-"else"		{ printf("\r%s \t ELSE\n", yytext); }
-"for"		{ printf("\r%s \t FOR\n", yytext); }
-"while"		{ printf("\r%s \t WHILE\n", yytext); }
-"string"		{ printf("\r%s \t STRING\n", yytext); }
-"int"		{ printf("\r%s \t INT\n", yytext); }
-"float"		{ printf("\r%s \t FLOAT\n", yytext); }
-"void"		{ printf("\r%s \t VOID\n", yytext); }
-"bool"		{ printf("\r%s \t BOOL\n", yytext); }
-"true"		{ printf("\r%s \t TRUE\n", yytext); }
-"false"		{ printf("\r%s \t FALSE\n", yytext); }
-"return"		{ printf("\r%s \t RET\n", yytext); }
-"continue"		{ printf("\r%s \t CONT\n", yytext); }
-"break"		{ printf("\r%s \t BREAK\n", yytext); }
-{number}		{ printf("\r%s \t I_CONST\n", yytext); }
-{number}"."{number}		{ printf("\r%s \t F_CONST\n", yytext); }
+"print"		{ printf("%s \t PRINT\n", yytext); }
+"if"		{ printf("%s \t IF\n", yytext); }
+"else"		{ printf("%s \t ELSE\n", yytext); }
+"for"		{ printf("%s \t FOR\n", yytext); }
+"while"		{ printf("%s \t WHILE\n", yytext); }
+"string"		{ printf("%s \t STRING\n", yytext); }
+"int"		{ printf("%s \t INT\n", yytext); }
+"float"		{ printf("%s \t FLOAT\n", yytext); }
+"void"		{ printf("%s \t VOID\n", yytext); }
+"bool"		{ printf("%s \t BOOL\n", yytext); }
+"true"		{ printf("%s \t TRUE\n", yytext); }
+"false"		{ printf("%s \t FALSE\n", yytext); }
+"return"		{ printf("%s \t RET\n", yytext); }
+"continue"		{ printf("%s \t CONT\n", yytext); }
+"break"		{ printf("%s \t BREAK\n", yytext); }
+{number}		{ printf("%s \t I_CONST\n", yytext); }
+{number}"."{number}		{ printf("%s \t F_CONST\n", yytext); }
 
 "/*"		{ C_comment(); }
 "//"		{ CPP_comment(); }
 
-{id}	{ printf("\r%s \t ID\n", yytext); }
+{id}	{ printf("%s \t ID\n", yytext); }
 \n			{ line_cnt++; } 
+.			{ /* ignore bad characters */ }
 
 %%
 
@@ -109,7 +111,7 @@ loop:
 void CPP_comment()
 {
 	char c;
-	printf("\r//");
+	printf("//");
 	while ((c = input()) != '\n' && c != 0)
 	{
 		putchar(c);
@@ -121,7 +123,7 @@ void CPP_comment()
 
 void str_const()
 {
-	printf("\r\" \t QUOTA\n");
+	printf("\" \t QUOTA\n");
 
 	char c;
 	while ((c = input()) != '\"' && c != 0)
@@ -130,7 +132,7 @@ void str_const()
 	}
 	printf(" \t STR_CONST\n");
 
-	printf("\r\" \t QUOTA\n");
+	printf("\" \t QUOTA\n");
 }
 
 int yywrap(void)
